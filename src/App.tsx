@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Box, Typography } from "@mui/material";
 import Navbar from "./components/NavBar";
 import Home from "./pages/Home";
+import Skills from "./pages/Skills";
 
 const App: React.FC = () => {
   return (
@@ -19,6 +20,19 @@ const App: React.FC = () => {
           }}
         >
           <Home />
+        </Box>
+
+        {/* Skills Section */}
+        <Box
+          id="skills"
+          sx={{
+            minHeight: "100vh",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Skills />
         </Box>
 
         {/* Projects Section */}

@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
 
   // Function to track the active section on scroll
   const handleScroll = () => {
-    const sections = ["home", "projects", "about"];
+    const sections = ["home", "skills", "projects", "about"];
     const scrollPosition = window.scrollY;
 
     // Check which section is in view
@@ -84,11 +84,11 @@ const Navbar: React.FC = () => {
             flexGrow: 1,
           }}
         >
-          {["home", "projects", "about"].map((route, index) => {
+          {["home", "skills", "projects", "about"].map((route, index) => {
             return (
               <Button
                 key={index}
-                href={`#${route}`} // Use href to scroll to the respective section
+                href={`#${route}`}
                 sx={{
                   color: activeSection === route ? primaryColor : "#494949",
                   "&:hover": {
@@ -101,6 +101,8 @@ const Navbar: React.FC = () => {
               >
                 {route === "home"
                   ? "Home"
+                  : route === "skills"
+                  ? "Skills"
                   : route === "projects"
                   ? "Projects"
                   : "About"}
