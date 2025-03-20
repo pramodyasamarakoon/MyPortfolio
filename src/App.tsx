@@ -1,26 +1,54 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Container, Box, Typography } from "@mui/material";
+import Navbar from "./components/NavBar";
+import Home from "./pages/Home";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <Navbar />
+      <Container>
+        {/* Home Section */}
+        <Box
+          id="home"
+          sx={{
+            minHeight: "100vh",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Home />
+        </Box>
+
+        {/* Projects Section */}
+        <Box
+          id="projects"
+          sx={{
+            minHeight: "100vh",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Typography variant="h3">Projects Section</Typography>
+        </Box>
+
+        {/* About Section */}
+        <Box
+          id="about"
+          sx={{
+            minHeight: "100vh",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Typography variant="h3">About Me Section</Typography>
+        </Box>
+      </Container>
+    </>
   );
-}
+};
 
 export default App;
